@@ -36,7 +36,37 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
   if(message.content == '!고양선생킬뎃') {
-    return message.channel.send('고양선생의 킬뎃은 6.9입니다.');
+    return message.channel.send('고양선생의 킬뎃은 [6.9] 입니다.');
+  }
+  if(message.content == '!메이지킬뎃') {
+    return message.channel.send('메이지의 킬뎃은 [4.7] 입니다.');
+  }
+  if(message.content == '!사화킬뎃') {
+    return message.channel.send('사화의 킬뎃은 [2.9] 입니다.');
+  }
+  if(message.content == '!고래킬뎃') {
+    return message.channel.send('블루웨일의 킬뎃은 [측정불가] 입니다.');
+  }
+  if(message.content == '!웃음벨킬뎃') {
+    return message.channel.send('웃음벨의 킬뎃은 [2.5] 입니다.');
+  }
+  if(message.content == '!헬로킬뎃') {
+    return message.channel.send('헬로의 킬뎃은 [1.9] 입니다.');
+  }
+  if(message.content == '!자옹킬뎃') {
+    return message.channel.send('자옹의 킬뎃은 [2] 입니다.');
+  }
+  if(message.content == '!헌터협회에서인정받는상급헌터가되는방법') {
+    return message.channel.send('석궁을 쓰지 마세요.');
+  }
+  if(message.content == '!도우미질문') {
+    return message.channel.send('도우미는 현재 AI의 답변시스템을 이용할 수 없습니다');
+  }
+  if(message.content == '!현재잡담방') {
+    return message.channel.send('고인물들밖에 없는 대화창입니다.');
+  }
+  if(message.content == '!돌체쓰는영상') {
+    return message.channel.send('https://www.youtube.com/watch?v=_YbsTRDtPRY');
   }
 
   if(message.content == 'embed') {
