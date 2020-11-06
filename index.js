@@ -34,6 +34,9 @@ client.on('message', (message) => {
   if(message.content == 'ping') {
     return message.reply('pong');
   }
+  if(message.content == '!고양선생킬뎃'){
+    return message.reply('현재고양선생의 킬뎃은 8.75 입니다');
+  }
 
   if(message.content == 'embed') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
