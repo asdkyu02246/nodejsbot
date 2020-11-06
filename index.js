@@ -36,7 +36,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
   if(message.content == '!고양선생킬뎃') {
-    return message.reply('고양선생의 킬뎃은 6.9입니다.');
+    return message.channel.send('고양선생의 킬뎃은 6.9입니다.');
   }
 
   if(message.content == 'embed') {
