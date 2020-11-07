@@ -16,12 +16,12 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 
   let state_list = [
-    '한국헌터협회 AI',
-'메이지님 고인물!',
-'고양선생님 고인물!'
+    '!help를 쳐보세요.',
+    '메렁메렁',
+    '에베베베베',
   ]
   let state_list_index = 1;
-  let change_delay = 400; // 이건 초입니당. 1000이 1초입니당.
+  let change_delay = 3000; // 이건 초입니당. 1000이 1초입니당.
 
   function changeState() {
     setTimeout(() => {
@@ -78,7 +78,7 @@ client.on('message', (message) => {
     // let msg = message.content;
     // embed.setColor('#186de6')
     // embed.setAuthor(user+'이(가) 메세지를 보냈습니다.', img)
-    // embed.setFooter(`H.ello AI ❤️`)
+    // embed.setFooter(`콜라곰 BOT ❤️`)
     // embed.addField('메세지 내용', msg, true);
     // embed.setTimestamp()
     // client.users.find(x => x.id == adminUserId).send(embed);
@@ -103,47 +103,14 @@ client.on('message', (message) => {
   if(message.content == 'ping') {
     return message.reply('pong');
   }
-if(message.content == '!고양선생킬뎃') {
-    return message.channel.send('고양선생의 킬뎃은 [6.9] 입니다.');
-  }
-  if(message.content == '!메이지킬뎃') {
-    return message.channel.send('메이지의 킬뎃은 [4.7] 입니다.');
-  }
-  if(message.content == '!사화킬뎃') {
-    return message.channel.send('사화의 킬뎃은 [2.9] 입니다.');
-  }
-  if(message.content == '!고래킬뎃') {
-    return message.channel.send('블루웨일의 킬뎃은 [측정불가] 입니다.');
-  }
-  if(message.content == '!웃음벨킬뎃') {
-    return message.channel.send('웃음벨의 킬뎃은 [2.5] 입니다.');
-  }
-  if(message.content == '!헬로킬뎃') {
-    return message.channel.send('헬로의 킬뎃은 [1.9] 입니다.');
-  }
-  if(message.content == '!자옹킬뎃') {
-    return message.channel.send('자옹의 킬뎃은 [2] 입니다.');
-  }
-  if(message.content == '!헌터협회에서인정받는상급헌터가되는방법') {
-    return message.channel.send('석궁을 쓰지 마세요.');
-  }
-  if(message.content == '!도우미질문') {
-    return message.channel.send('도우미는 현재 AI의 답변시스템을 이용할 수 없습니다');
-  }
-  if(message.content == '!현재잡담방') {
-    return message.channel.send('고인물들밖에 없는 대화창입니다.');
-  }
-  if(message.content == '!돌체쓰는영상') {
-    return message.channel.send('https://www.youtube.com/watch?v=_YbsTRDtPRY');
-  }
 
   if(message.content == '!si') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
-    embed.setAuthor('server info of H.ello AI', img)
-    embed.setFooter(`H.ello AI ❤️`)
+    embed.setAuthor('server info of 콜라곰 BOT', img)
+    embed.setFooter(`콜라곰 BOT ❤️`)
     embed.addBlankField()
     embed.addField('RAM usage',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
     embed.addField('running time', `${duration}`, true);
@@ -173,7 +140,7 @@ if(message.content == '!고양선생킬뎃') {
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('H.ello AI', img, 'http://www.naver.com')
+      .setAuthor('나긋해', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -183,10 +150,10 @@ if(message.content == '!고양선생킬뎃') {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('H.ello AI', img)
+      .setFooter('나긋해가 만듬', img)
 
     message.channel.send(embed)
-  } else if(message.content == '!help0001') {
+  } else if(message.content == '!help') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
       {name: '!help', desc: 'help'},
@@ -200,9 +167,9 @@ if(message.content == '!고양선생킬뎃') {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of H.ello AI', helpImg)
+      .setAuthor('Help of 콜라곰 BOT', helpImg)
       .setColor('#186de6')
-      .setFooter(`H.ello AI ❤️`)
+      .setFooter(`콜라곰 BOT ❤️`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -284,7 +251,7 @@ if(message.content == '!고양선생킬뎃') {
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
-    } else if(!isNum) { // c @H.ello 3
+    } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
         if(isNaN(message.content.split(' ')[2])) return;
 
@@ -335,16 +302,16 @@ if(message.content == '!고양선생킬뎃') {
     let kick_msg = message.author.username+'#'+message.author.discriminator+'이(가) 강퇴시켰습니다.';
 
     message.member.guild.members.find(x => x.id == userId).ban(kick_msg)
-  } else if(message.content.startsWith('!요주트리오방')) {
+  } else if(message.content.startsWith('!주사위')) {
     let min = 1;
-    let max = 10;
+    let max = 6;
     let dice_num = parseInt(Math.random() * (max - min) + min);
-    return message.reply(`주목! 트리오 ${dice_num}번방이 요주의 트리오입니다!`);
-  } else if(message.content.startsWith('!상급헌터')) {
+    return message.reply(`${dice_num}가 나왔습니다.`);
+  } else if(message.content.startsWith('!야')) {
     let arr = [
-      '고양선생',
-      '헌터웨일',
-      '메이지',
+      '왜',
+      '뭐',
+      '뭠마',
     ]
     let min = 0;
     let max = arr.length;
